@@ -8,16 +8,12 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Prop, Vue } from 'vue-property-decorator';
 
-@Component({
-	props: {
-		memo: {
-			type: Object
-		}
-	}
-})
+@Component
 export default class Memo extends Vue {
+
+	@Prop() memo!: Object;
 
 }
 </script>
